@@ -1,0 +1,56 @@
+Folder Structure of a Next.js Project:
+
+hello-world-next/
+├── node_modules/
+├── public/
+├── styles/
+├── pages/
+├── .gitignore
+├── package.json
+├── next.config.js (optional)
+└── README.md
+
+1. node_modules/:
+
+-) Contains all the dependencies (such as React and Next.js) installed via npm. This folder is automatically created when you run npm install.
+
+2. public/:
+
+-) This folder contains static files that are publicly accessible, such as images, icons, and fonts. Any file placed here can be accessed directly via URL. For example, public/favicon.ico would be available at http://localhost:3000/favicon.ico.
+
+3. styles/:
+
+-) Stores CSS files for styling the application. The globals.css file defines global styles for the app. You can also use CSS modules (like Home.module.css) to scope styles to specific components or pages.
+
+4. pages/:
+
+-) The pages directory is crucial in Next.js as it automatically handles routing. Each .js file inside this folder represents a route in your app. For instance:
+pages/index.js is the homepage route (/).
+pages/about.js would correspond to the /about route.
+Special pages like pages/_app.js or pages/_document.js can be used for customizing the app’s behavior.
+
+5. package.json:
+
+-) This file contains metadata about the project (like its name and version) and lists all of the dependencies and scripts (such as npm run dev) for the project.
+
+6. .gitignore:
+
+-) Specifies which files and directories should be ignored by Git. For example, node_modules/ and .next/ (which stores build files) are typically ignored.
+
+Another Example of Next.js Folder Structure:
+
+hello-world-next/
+├── node_modules/      # Contains all installed npm dependencies (do not edit directly).
+├── public/            # Static assets, such as images and fonts, are placed here.
+│   └── favicon.ico    # A default favicon for your project.
+├── src/               # (Optional) If you choose to use this, it's a common structure for organizing your code.
+│   └── components/    # Reusable UI components (optional).
+│   └── pages/         # Pages of the app (optional alternative to default 'pages' folder).
+│       └── index.js   # The main entry page for the application.
+├── styles/            # CSS files for styling your application.
+│   ├── globals.css    # Global CSS styles for your app.
+│   ├── Home.module.css  # CSS Module for styling the `Home` page.
+├── .gitignore         # A file telling Git which files/folders to ignore (e.g., `node_modules`).
+├── package.json       # Contains metadata and npm dependencies for your project.
+├── next.config.js     # Configuration file for customizing Next.js behavior (optional).
+└── README.md          # A file where project information and documentation can be written.
